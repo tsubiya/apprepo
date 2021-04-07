@@ -11,7 +11,7 @@ echo "Image Successfully pushed to ecr"
 
 #create new taskdefinition with new version
 
-sed -i s#040168646982.dkr.ecr.us-east-2.amazonaws.com/apprepo:10#040168646982.dkr.ecr.us-east-2.amazonaws.com/apprepo:$11#g taskdefination.json
+sed -i s#040168646982.dkr.ecr.us-east-2.amazonaws.com/apprepo:10#040168646982.dkr.ecr.us-east-2.amazonaws.com/apprepo:$11#g taskdefinition.json
 
 #register task defination
-aws ecs register-task-definition  --cli-input-json  file://taskdefination.json --region us-east-2
+aws ecs register-task-definition  --cli-input-json  file://taskdefinition.json --region us-east-2
